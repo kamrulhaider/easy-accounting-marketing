@@ -1,24 +1,24 @@
 :root {
-  /* Modern Color Palette - Deep Slate & Vibrant Purple */
-  --primary: #8b5cf6;
-  --primary-hover: #7c3aed;
-  --secondary: #ec4899;
-  --background: #0f172a;
-  --surface: rgba(30, 41, 59, 0.7);
-  --surface-border: rgba(255, 255, 255, 0.1);
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
+  /* Palette aligned with logo - Greens + Slate */
+  --primary: #2e9d45; /* bright logo green */
+  --primary-hover: #267b36;
+  --secondary: #213843; /* dark slate for contrast */
+  --background: #f7fbf7; /* very light neutral background */
+  --surface: rgba(33, 56, 67, 0.04);
+  --surface-border: rgba(33, 56, 67, 0.07);
+  --text-primary: #0f172a; /* deep slate text */
+  --text-secondary: #4b5563; /* muted secondary text */
   --success: #10b981;
   --warning: #f59e0b;
   --danger: #ef4444;
 
   /* Typography */
-  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-heading: 'Outfit', sans-serif;
+  --font-main: "Inter", system-ui, -apple-system, sans-serif;
+  --font-heading: "Outfit", sans-serif;
 
   /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(33, 56, 67, 0.06);
   --glass-blur: blur(12px);
 
   font-family: var(--font-main);
@@ -42,7 +42,11 @@
 
 body {
   min-height: 100vh;
-  background: radial-gradient(circle at top right, #1e1b4b, #0f172a);
+  background: radial-gradient(
+    circle at top right,
+    rgba(46, 157, 69, 0.06),
+    rgba(33, 56, 67, 0.02)
+  );
   background-attachment: fixed;
   overflow-x: hidden;
 }
@@ -152,7 +156,7 @@ button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 10px 20px rgba(46, 157, 69, 0.22);
 }
 
 .btn-secondary {
@@ -165,7 +169,7 @@ button {
 
 .badge {
   display: inline-block;
-  background: rgba(139, 92, 246, 0.1);
+  background: rgba(46, 157, 69, 0.08);
   color: var(--primary);
   padding: 0.5rem 1rem;
   border-radius: 99px;
@@ -293,7 +297,11 @@ button {
   position: absolute;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(46, 157, 69, 0.12) 0%,
+    rgba(46, 157, 69, 0) 70%
+  );
   filter: blur(60px);
   z-index: -1;
 }
@@ -306,7 +314,11 @@ button {
 .blob-2 {
   bottom: 100px;
   left: -200px;
-  background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, rgba(236, 72, 153, 0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(33, 56, 67, 0.06) 0%,
+    rgba(33, 56, 67, 0) 70%
+  );
 }
 
 .glass {
@@ -383,7 +395,7 @@ button {
 }
 
 .visual-circle::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -411,7 +423,6 @@ button {
 }
 
 @media (max-width: 968px) {
-
   .hero,
   .philosophy-section {
     grid-template-columns: 1fr;
